@@ -99,6 +99,22 @@ export default {
           "0%, 100%": { opacity: "1" },
           "50%": { opacity: "0.6" },
         },
+        sheen: {
+          from: { backgroundPosition: "-200% 0" },
+          to: { backgroundPosition: "200% 0" },
+        },
+        parallax: {
+          from: { transform: "translateY(0)" },
+          to: { transform: "translateY(-50%)" },
+        },
+        glitch: {
+          "0%": { transform: "translate(0)" },
+          "20%": { transform: "translate(-1px, 1px)" },
+          "40%": { transform: "translate(-2px, -1px)" },
+          "60%": { transform: "translate(1px, 1px)" },
+          "80%": { transform: "translate(2px, -1px)" },
+          "100%": { transform: "translate(0)" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
@@ -106,6 +122,10 @@ export default {
         scanlines: "scanlines 0.8s steps(8) infinite",
         float: "float 4s ease-in-out infinite",
         flicker: "flicker 2.5s steps(2, end) infinite",
+        sheen: "sheen 3s linear infinite",
+        "parallax-slow": "parallax 40s linear infinite",
+        "parallax-fast": "parallax 20s linear infinite",
+        glitch: "glitch 1s steps(2, end) infinite",
       },
     },
   },
