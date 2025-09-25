@@ -1,10 +1,24 @@
 import { Link } from "react-router-dom";
+import { Gamepad2, Sparkles, Mail } from "lucide-react";
 
 function Badge({ children }: { children: React.ReactNode }) {
   return (
     <span className="px-2 py-1 rounded border text-[10px] tracking-wider uppercase bg-card/60">
       {children}
     </span>
+  );
+}
+
+function PixelOrb({ className }: { className?: string }) {
+  return (
+    <span
+      aria-hidden
+      className={
+        "absolute block rounded-sm border image-pixelated shadow-neon " +
+        (className ?? "")
+      }
+      style={{ imageRendering: "pixelated" }}
+    />
   );
 }
 
@@ -40,31 +54,81 @@ export default function Index() {
   return (
     <>
       {/* Hero */}
-      <section className="container pt-16 md:pt-24 pb-8 md:pb-12">
-        <div className="inline-flex items-center gap-2 text-[10px] uppercase tracking-widest text-foreground/60">
-          <span className="h-1.5 w-1.5 bg-accent inline-block" />
-          Saad Ahmed — Pixel Artist & Game Designer
-        </div>
-        <h1 className="mt-6 font-pixel text-2xl sm:text-3xl md:text-4xl leading-relaxed neon-text">
-          Retro gaming pixel art with a modern dark aesthetic.
-        </h1>
-        <p className="mt-4 max-w-2xl text-foreground/70">
-          Showcasing handcrafted sprites, immersive tilesets, and UI with neon
-          glow. Built for modern screens, inspired by 8-bit classics.
-        </p>
-        <div className="mt-8 flex flex-wrap items-center gap-4">
-          <Link
-            to="/portfolio"
-            className="px-4 py-2 rounded bg-accent text-accent-foreground shadow-neon text-xs md:text-sm"
-          >
-            View Portfolio
-          </Link>
-          <a
-            href="mailto:hello@saadpixels.dev"
-            className="px-4 py-2 rounded border hover:bg-accent/10 text-xs md:text-sm"
-          >
-            Contact
-          </a>
+      <section className="container pt-14 md:pt-20 pb-10 md:pb-14">
+        <div className="grid items-center gap-10 md:gap-12 md:grid-cols-2">
+          {/* Left copy */}
+          <div>
+            <div className="inline-flex items-center gap-2 text-[10px] uppercase tracking-widest text-foreground/60">
+              <span className="h-1.5 w-1.5 bg-accent inline-block" />
+              Saad Ahmed — Pixel Artist & Game Designer
+              <span className="ml-3 px-2 py-0.5 rounded border text-[9px] text-accent animate-flicker">Open for commissions</span>
+            </div>
+            <h1 className="mt-5 font-pixel text-3xl sm:text-4xl md:text-5xl leading-[1.25] neon-text">
+              Retro gaming pixel art with a modern dark aesthetic.
+            </h1>
+            <p className="mt-4 max-w-xl text-foreground/70">
+              Handcrafted sprites, immersive tilesets, and UI with neon glow.
+              Built for modern screens. Inspired by 8-bit classics.
+            </p>
+            <div className="mt-7 flex flex-wrap items-center gap-3">
+              <Link
+                to="/portfolio"
+                className="px-4 py-2 rounded bg-accent text-accent-foreground shadow-neon text-xs md:text-sm inline-flex items-center gap-2"
+              >
+                <Gamepad2 className="h-4 w-4" /> View Portfolio
+              </Link>
+              <a
+                href="mailto:hello@saadpixels.dev"
+                className="px-4 py-2 rounded border hover:bg-accent/10 text-xs md:text-sm inline-flex items-center gap-2"
+              >
+                <Mail className="h-4 w-4" /> Hire Me
+              </a>
+            </div>
+            <div className="mt-6 flex flex-wrap items-center gap-4 text-[11px] text-foreground/60">
+              <span className="inline-flex items-center gap-1"><Sparkles className="h-3.5 w-3.5 text-accent"/> 8-bit • 16-bit • UI</span>
+              <span className="opacity-40">|</span>
+              <span>10+ shipped projects</span>
+              <span className="opacity-40">|</span>
+              <span>Worldwide</span>
+            </div>
+          </div>
+
+          {/* Right visual */}
+          <div className="relative">
+            <div className="relative rounded-xl border pixel-border overflow-hidden bg-card/70">
+              <div className="flex items-center justify-between px-3 py-2 border-b bg-background/60">
+                <span className="font-pixel text-[10px] tracking-wider">PRESS START</span>
+                <div className="flex gap-2">
+                  <span className="h-2 w-2 bg-accent/70" />
+                  <span className="h-2 w-2 bg-secondary/70" />
+                  <span className="h-2 w-2 bg-foreground/40" />
+                </div>
+              </div>
+              <div
+                className="relative aspect-[4/3] grid place-items-center"
+                style={{
+                  background:
+                    `radial-gradient(circle at 50% 40%, hsl(var(--accent)/0.15), transparent 60%),
+                     radial-gradient(circle at 80% 60%, hsl(var(--secondary)/0.15), transparent 55%),
+                     repeating-linear-gradient(0deg, hsl(var(--foreground)/0.06) 0 2px, transparent 2px 4px),
+                     repeating-linear-gradient(90deg, hsl(var(--foreground)/0.06) 0 2px, transparent 2px 4px)`,
+                  imageRendering: "pixelated",
+                }}
+              >
+                <div className="relative">
+                  <div className="h-16 w-16 sm:h-20 sm:w-20 bg-accent border animate-float" style={{ imageRendering: "pixelated" }} />
+                  <PixelOrb className="size-3 bg-secondary border-secondary/60 -top-4 -left-5 animate-float" />
+                  <PixelOrb className="size-2 bg-accent border-accent/60 top-3 -right-4 animate-float" />
+                  <PixelOrb className="size-2.5 bg-foreground/50 border-foreground/30 -bottom-5 left-6 animate-float" />
+                </div>
+                <div className="absolute inset-0 crt-overlay" aria-hidden />
+              </div>
+              <div className="flex items-center justify-between px-3 py-2 border-t bg-background/60">
+                <span className="text-[10px] uppercase tracking-widest text-foreground/60">Pixel Density: High</span>
+                <span className="font-pixel text-[10px]">▲ ▲ ▼ ▶ ▶ ◀ ◀</span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
