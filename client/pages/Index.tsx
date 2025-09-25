@@ -55,7 +55,7 @@ export default function Index() {
     <>
       {/* Hero */}
       <section className="container pt-14 md:pt-20 pb-10 md:pb-14">
-        <div className="grid items-center gap-10 md:gap-12 md:grid-cols-2">
+        <div className="grid items-center gap-10 md:gap-12 md:grid-cols-2 md:[grid-template-columns:1.1fr_0.9fr]">
           {/* Left copy */}
           <div>
             <div className="inline-flex items-center gap-2 text-[10px] uppercase tracking-widest text-foreground/60">
@@ -63,7 +63,7 @@ export default function Index() {
               Saad Ahmed — Pixel Artist & Game Designer
               <span className="ml-3 px-2 py-0.5 rounded border text-[9px] text-accent animate-flicker">Open for commissions</span>
             </div>
-            <h1 className="mt-5 font-pixel text-3xl sm:text-4xl md:text-5xl leading-[1.25] neon-text max-w-[24ch]">
+            <h1 className="mt-5 font-pixel text-3xl sm:text-4xl md:text-5xl leading-[1.25] neon-text max-w-[36ch]">
               Retro Pixel Art. Modern Dark.
             </h1>
             <p className="mt-4 max-w-md text-foreground/70">
@@ -94,7 +94,7 @@ export default function Index() {
 
           {/* Right visual */}
           <div className="relative">
-            <div className="relative rounded-xl border pixel-border overflow-hidden bg-card/70">
+            <div className="relative rounded-xl border pixel-border overflow-hidden bg-card/70 w-full max-w-[420px] md:max-w-[460px] mx-auto">
               <div className="flex items-center justify-between px-3 py-2 border-b bg-background/60">
                 <span className="font-pixel text-[10px] tracking-wider">PRESS START</span>
                 <div className="flex gap-2">
