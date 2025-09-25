@@ -24,9 +24,9 @@ function PixelOrb({ className }: { className?: string }) {
 
 function ProjectCard({ title, tag, accent }: { title: string; tag: string; accent: string }) {
   return (
-    <div className="group relative rounded-xl border bg-card/60 backdrop-blur overflow-hidden">
+    <div className="group relative rounded-xl border bg-card/60 backdrop-blur overflow-hidden tilt-hover">
       <div
-        className="h-44 sm:h-52 border-b pixel-border"
+        className="h-44 sm:h-52 border-b pixel-border transform-gpu transition-transform group-hover:rotate-1 group-hover:scale-[1.02]"
         style={{
           background:
             `
@@ -63,7 +63,7 @@ export default function Index() {
               Saad Ahmed — Pixel Artist & Game Designer
               <span className="ml-3 px-2 py-0.5 rounded border text-[9px] text-accent animate-flicker">Open for commissions</span>
             </div>
-            <h1 className="mt-5 font-pixel text-3xl sm:text-4xl md:text-5xl leading-[1.25] neon-text max-w-[30ch]">
+            <h1 className="mt-5 font-pixel text-3xl sm:text-4xl md:text-5xl leading-[1.25] neon-text neon-pulse glitch-hover max-w-[36ch]">
               Retro Pixel Art. Modern Dark.
             </h1>
             <p className="mt-4 max-w-md text-foreground/70">
@@ -72,13 +72,13 @@ export default function Index() {
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <Link
                 to="/portfolio"
-                className="px-4 py-2 rounded bg-accent text-accent-foreground shadow-neon text-xs md:text-sm inline-flex items-center gap-2"
+                className="px-4 py-2 rounded bg-accent text-accent-foreground shadow-neon text-xs md:text-sm inline-flex items-center gap-2 btn-sheen"
               >
                 <Gamepad2 className="h-4 w-4" /> View Portfolio
               </Link>
               <a
                 href="mailto:hello@saadpixels.dev"
-                className="px-4 py-2 rounded border hover:bg-accent/10 text-xs md:text-sm inline-flex items-center gap-2"
+                className="px-4 py-2 rounded border hover:bg-accent/10 text-xs md:text-sm inline-flex items-center gap-2 btn-sheen"
               >
                 <Mail className="h-4 w-4" /> Hire Me
               </a>
@@ -94,7 +94,7 @@ export default function Index() {
 
           {/* Right visual */}
           <div className="relative">
-            <div className="relative rounded-xl border pixel-border overflow-hidden bg-card/70 w-full max-w-[420px] md:max-w-[460px] mx-auto">
+            <div className="relative rounded-xl border pixel-border overflow-hidden bg-card/70 w-full max-w-[420px] md:max-w-[460px] mx-auto tilt-hover">
               <div className="flex items-center justify-between px-3 py-2 border-b bg-background/60">
                 <span className="font-pixel text-[10px] tracking-wider">PRESS START</span>
                 <div className="flex gap-2">
@@ -114,6 +114,8 @@ export default function Index() {
                   imageRendering: "pixelated",
                 }}
               >
+                <div className="stars slow" aria-hidden />
+                <div className="stars fast" aria-hidden />
                 <div className="relative">
                   <div className="h-16 w-16 sm:h-20 sm:w-20 bg-accent border animate-float" style={{ imageRendering: "pixelated" }} />
                   <PixelOrb className="size-3 bg-secondary border-secondary/60 -top-4 -left-5 animate-float" />
