@@ -58,6 +58,13 @@ export default {
           ring: "hsl(var(--sidebar-ring))",
         },
       },
+      fontFamily: {
+        sans: ["Inter", "ui-sans-serif", "system-ui", "Segoe UI", "Helvetica", "Arial", "Noto Sans", "Apple Color Emoji", "Segoe UI Emoji"],
+        pixel: ["\"Press Start 2P\"", "monospace"],
+      },
+      boxShadow: {
+        neon: "0 0 8px hsl(var(--accent) / 0.7), 0 0 24px hsl(var(--accent) / 0.35)",
+      },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
@@ -80,10 +87,15 @@ export default {
             height: "0",
           },
         },
+        scanlines: {
+          from: { backgroundPosition: "0 0" },
+          to: { backgroundPosition: "0 8px" },
+        },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        scanlines: "scanlines 0.8s steps(8) infinite",
       },
     },
   },
