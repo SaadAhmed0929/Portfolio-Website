@@ -63,7 +63,7 @@ export default function Index() {
               Saad Ahmed — Pixel Artist & Game Designer
               <span className="ml-3 px-2 py-0.5 rounded border text-[9px] text-accent animate-flicker">Open for commissions</span>
             </div>
-            <h1 className="mt-5 font-pixel text-3xl sm:text-4xl md:text-5xl leading-[1.25] neon-text max-w-[36ch]">
+            <h1 className="mt-5 font-pixel text-3xl sm:text-4xl md:text-5xl leading-[1.25] neon-text max-w-[30ch]">
               Retro Pixel Art. Modern Dark.
             </h1>
             <p className="mt-4 max-w-md text-foreground/70">
