@@ -133,4 +133,28 @@
   .neon-text {
     text-shadow: 0 0 6px hsl(var(--accent) / 0.7), 0 0 18px hsl(var(--accent) / 0.45);
   }
+  .neon-pulse {
+    animation: neonPulse 2.4s ease-in-out infinite;
+  }
+  @keyframes neonPulse {
+    0%, 100% { text-shadow: 0 0 6px hsl(var(--accent) / 0.6), 0 0 14px hsl(var(--accent) / 0.35); }
+    50% { text-shadow: 0 0 10px hsl(var(--accent) / 0.8), 0 0 24px hsl(var(--accent) / 0.55); }
+  }
+  .glitch-hover:hover {
+    text-shadow: 2px 0 hsl(var(--secondary) / 0.65), -2px 0 hsl(var(--accent) / 0.65), 0 0 12px hsl(var(--accent) / 0.35);
+    animation: glitch 0.9s steps(2, end) infinite;
+  }
+  .btn-sheen { position: relative; overflow: hidden; }
+  .btn-sheen::after {
+    content: "";
+    position: absolute; inset: -150% -50% auto auto; width: 50%; height: 300%;
+    background: linear-gradient(130deg, transparent 30%, hsla(var(--foreground)/0.05) 45%, hsla(var(--foreground)/0.15) 50%, transparent 60%);
+    transform: rotate(20deg);
+    animation: sheen 3.2s linear infinite;
+  }
+  .stars { position:absolute; inset:0; pointer-events:none; opacity:.08; }
+  .stars.fast { background-image: radial-gradient(hsl(var(--foreground)/0.8) 1px, transparent 1px); background-size: 2px 2px; animation: parallax 20s linear infinite; }
+  .stars.slow { background-image: radial-gradient(hsl(var(--foreground)/0.6) 1px, transparent 1px); background-size: 3px 3px; animation: parallax 40s linear infinite; }
+  .tilt-hover { transform-style: preserve-3d; transition: transform .3s ease; }
+  .tilt-hover:hover { transform: rotate3d(1, -1, 0, 6deg) translateY(-4px); }
 }
