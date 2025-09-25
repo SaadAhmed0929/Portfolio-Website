@@ -63,12 +63,11 @@ export default function Index() {
               Saad Ahmed — Pixel Artist & Game Designer
               <span className="ml-3 px-2 py-0.5 rounded border text-[9px] text-accent animate-flicker">Open for commissions</span>
             </div>
-            <h1 className="mt-5 font-pixel text-3xl sm:text-4xl md:text-5xl leading-[1.25] neon-text">
-              Retro gaming pixel art with a modern dark aesthetic.
+            <h1 className="mt-5 font-pixel text-3xl sm:text-4xl md:text-5xl leading-[1.25] neon-text max-w-[24ch]">
+              Retro Pixel Art. Modern Dark.
             </h1>
-            <p className="mt-4 max-w-xl text-foreground/70">
-              Handcrafted sprites, immersive tilesets, and UI with neon glow.
-              Built for modern screens. Inspired by 8-bit classics.
+            <p className="mt-4 max-w-md text-foreground/70">
+              Sprites, tilesets, and UI with neon glow.
             </p>
             <div className="mt-7 flex flex-wrap items-center gap-3">
               <Link
