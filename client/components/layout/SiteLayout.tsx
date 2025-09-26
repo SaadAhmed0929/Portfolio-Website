@@ -41,12 +41,7 @@ function Header() {
         <nav className="flex items-center gap-6 text-sm">
           <NavLink to="/">Home</NavLink>
           <NavLink to="/portfolio">Portfolio</NavLink>
-          <a
-            href="mailto:hello@saadpixels.dev"
-            className="text-accent hover:underline underline-offset-4"
-          >
-            Contact
-          </a>
+          <NavLink to="/contact">Contact</NavLink>
         </nav>
       </div>
     </header>
