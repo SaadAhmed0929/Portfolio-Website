@@ -76,12 +76,12 @@ export default function Index() {
               >
                 <Gamepad2 className="h-4 w-4" /> View Portfolio
               </Link>
-              <a
-                href="mailto:hello@saadpixels.dev"
+              <Link
+                to="/contact"
                 className="px-4 py-2 rounded border hover:bg-accent/10 text-xs md:text-sm inline-flex items-center gap-2 btn-sheen"
               >
                 <Mail className="h-4 w-4" /> Hire Me
-              </a>
+              </Link>
             </div>
             <div className="mt-6 flex flex-wrap items-center gap-4 text-[11px] text-foreground/60">
               <span className="inline-flex items-center gap-1"><Sparkles className="h-3.5 w-3.5 text-accent"/> 8-bit • 16-bit • UI</span>
