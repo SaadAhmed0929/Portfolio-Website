@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { Gamepad2, Sparkles, Mail } from "lucide-react";
+import { Gamepad2, Sparkles, Mail, Palette, Layers, Joystick, Wand2, ShieldCheck, FileDown, Clock, Package } from "lucide-react";
 
 function Badge({ children }: { children: React.ReactNode }) {
   return (
@@ -164,6 +164,141 @@ export default function Index() {
           <ProjectCard title="SPACE RUNNER" tag="Sprite Sheet" accent="hsl(var(--secondary) / 0.45)" />
           <ProjectCard title="DUNGEON MAPS" tag="Tileset" accent="hsl(var(--accent) / 0.35)" />
           <ProjectCard title="ARCADE BADGES" tag="Icons" accent="hsl(var(--secondary) / 0.35)" />
+        </div>
+      </section>
+
+      {/* What I Can Do */}
+      <section className="container py-12 md:py-16">
+        <div className="flex items-end justify-between gap-4">
+          <h2 className="font-pixel text-xl md:text-2xl">What I Can Do</h2>
+        </div>
+        <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+          <div className="group rounded-xl border bg-card/60 p-5 tilt-hover">
+            <div className="flex items-center gap-3">
+              <span className="h-8 w-8 rounded-sm bg-accent/15 grid place-items-center border border-accent/40 shadow-neon">
+                <Joystick className="h-4 w-4 text-accent" />
+              </span>
+              <h3 className="font-pixel text-xs">Sprite Sheets & Characters</h3>
+            </div>
+            <p className="mt-3 text-sm text-foreground/70">Playable heroes, enemies, NPCs, and props ready for engines.</p>
+          </div>
+          <div className="group rounded-xl border bg-card/60 p-5 tilt-hover">
+            <div className="flex items-center gap-3">
+              <span className="h-8 w-8 rounded-sm bg-secondary/15 grid place-items-center border border-secondary/40 shadow-neon">
+                <Layers className="h-4 w-4 text-secondary" />
+              </span>
+              <h3 className="font-pixel text-xs">Tilesets & Environments</h3>
+            </div>
+            <p className="mt-3 text-sm text-foreground/70">Seamless tiles, parallax backgrounds, and level mockups.</p>
+          </div>
+          <div className="group rounded-xl border bg-card/60 p-5 tilt-hover">
+            <div className="flex items-center gap-3">
+              <span className="h-8 w-8 rounded-sm bg-accent/15 grid place-items-center border border-accent/40 shadow-neon">
+                <Wand2 className="h-4 w-4 text-accent" />
+              </span>
+              <h3 className="font-pixel text-xs">UI, HUD & Icons</h3>
+            </div>
+            <p className="mt-3 text-sm text-foreground/70">Menus, inventories, badges, and on-screen indicators.</p>
+          </div>
+          <div className="group rounded-xl border bg-card/60 p-5 tilt-hover">
+            <div className="flex items-center gap-3">
+              <span className="h-8 w-8 rounded-sm bg-secondary/15 grid place-items-center border border-secondary/40 shadow-neon">
+                <Sparkles className="h-4 w-4 text-secondary" />
+              </span>
+              <h3 className="font-pixel text-xs">Animation & FX</h3>
+            </div>
+            <p className="mt-3 text-sm text-foreground/70">Idle, run, attack cycles, particles, and screen FX.</p>
+          </div>
+          <div className="group rounded-xl border bg-card/60 p-5 tilt-hover">
+            <div className="flex items-center gap-3">
+              <span className="h-8 w-8 rounded-sm bg-accent/15 grid place-items-center border border-accent/40 shadow-neon">
+                <Palette className="h-4 w-4 text-accent" />
+              </span>
+              <h3 className="font-pixel text-xs">Branding & Logos</h3>
+            </div>
+            <p className="mt-3 text-sm text-foreground/70">Pixel-perfect logotypes and cover art for your game or channel.</p>
+          </div>
+          <div className="group rounded-xl border bg-card/60 p-5 tilt-hover">
+            <div className="flex items-center gap-3">
+              <span className="h-8 w-8 rounded-sm bg-secondary/15 grid place-items-center border border-secondary/40 shadow-neon">
+                <Package className="h-4 w-4 text-secondary" />
+              </span>
+              <h3 className="font-pixel text-xs">Level Mockups</h3>
+            </div>
+            <p className="mt-3 text-sm text-foreground/70">Playable-feel mockups for pacing, collisions, and UX checks.</p>
+          </div>
+        </div>
+      </section>
+
+      {/* What You'll Get */}
+      <section className="container py-12 md:py-16">
+        <div className="flex items-end justify-between gap-4">
+          <h2 className="font-pixel text-xl md:text-2xl">What You’ll Get</h2>
+        </div>
+        <div className="mt-6 grid gap-8 md:grid-cols-2">
+          <ul className="space-y-3">
+            <li className="flex items-start gap-3">
+              <ShieldCheck className="h-4 w-4 mt-0.5 text-accent" />
+              <div>
+                <p className="text-sm">Clean source files</p>
+                <p className="text-xs text-foreground/60">PNG/WEBP + layered Aseprite/PSD on request</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <ShieldCheck className="h-4 w-4 mt-0.5 text-accent" />
+              <div>
+                <p className="text-sm">Engine‑ready exports</p>
+                <p className="text-xs text-foreground/60">Sliced spritesheets + JSON data if needed</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <ShieldCheck className="h-4 w-4 mt-0.5 text-accent" />
+              <div>
+                <p className="text-sm">Consistent palettes</p>
+                <p className="text-xs text-foreground/60">Documented color ramps and tile sizes</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <ShieldCheck className="h-4 w-4 mt-0.5 text-accent" />
+              <div>
+                <p className="text-sm">Licensing & usage</p>
+                <p className="text-xs text-foreground/60">Clear rights for commercial/indie use</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-3">
+              <ShieldCheck className="h-4 w-4 mt-0.5 text-accent" />
+              <div>
+                <p className="text-sm">Revisions included</p>
+                <p className="text-xs text-foreground/60">Feedback loops to nail your vision</p>
+              </div>
+            </li>
+          </ul>
+
+          <div className="relative rounded-xl border bg-card/60 p-6 pixel-border">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <span className="h-2 w-2 bg-accent/70" />
+                <span className="h-2 w-2 bg-secondary/70" />
+                <span className="h-2 w-2 bg-foreground/40" />
+              </div>
+              <span className="font-pixel text-[10px] tracking-wider">DELIVERY PACK</span>
+            </div>
+            <div className="mt-6 grid grid-cols-3 gap-4 text-center">
+              <div className="rounded-md border p-3 bg-background/50">
+                <FileDown className="h-5 w-5 mx-auto text-accent" />
+                <p className="mt-2 text-[10px] uppercase tracking-widest">Assets</p>
+              </div>
+              <div className="rounded-md border p-3 bg-background/50">
+                <Package className="h-5 w-5 mx-auto text-secondary" />
+                <p className="mt-2 text-[10px] uppercase tracking-widest">Sprites</p>
+              </div>
+              <div className="rounded-md border p-3 bg-background/50">
+                <Clock className="h-5 w-5 mx-auto text-foreground/70" />
+                <p className="mt-2 text-[10px] uppercase tracking-widest">Timeline</p>
+              </div>
+            </div>
+            <p className="mt-6 text-xs text-foreground/60">Need a specific format? I adapt outputs to your engine and pipeline.</p>
+          </div>
         </div>
       </section>
 
