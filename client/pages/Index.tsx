@@ -313,12 +313,12 @@ export default function Index() {
             </p>
           </div>
           <div className="flex md:justify-end gap-4">
-            <a
-              href="mailto:hello@saadpixels.dev"
+            <Link
+              to="/contact"
               className="px-4 py-2 rounded bg-accent text-accent-foreground shadow-neon text-xs md:text-sm"
             >
               Get in touch
-            </a>
+            </Link>
             <Link
               to="/portfolio"
               className="px-4 py-2 rounded border hover:bg-accent/10 text-xs md:text-sm"
